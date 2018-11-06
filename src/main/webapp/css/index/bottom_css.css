@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+    background: #fff;
+}
+body {
+    font: 12px Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+body , div , dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+li{
+	list-style:none;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+/*底部样式*/
+#b_bottom{
+	background-color: #FFF;
+	height:203px;
+	width:100%;
+	/*min-width: 1000px;*/
+	padding:9px 0px 0px;
+}
+#b_bottom #b_url{
+	min-width: 1000px;
+	background-color: #9F9F9F;
+	margin: 0px auto;
+	height: 100%;
+	width: 90%;
+}
+#b_bottom #b_url ul{
+	float: left;
+	display:block;
+}
+#b_bottom #b_url li{
+	margin:16px 69px;
+	font-size: 13px;
+}
+#b_bottom #b_url a{
+}
+#b_bottom #b_url a:hover{
+	color: #FFFF6F;
+}

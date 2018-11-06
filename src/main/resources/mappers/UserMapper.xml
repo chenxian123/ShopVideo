@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.UsersMapper">
+    <select id="selectUsersById" parameterType="int" resultType="com.shop.entity.Users">
+        select * from users where id=#{id}
+    </select>
+    <select id="selectAllUsers" resultType="com.shop.entity.Users">
+    	select * from users
+    </select>
+    <insert id="insertUsers" useGeneratedKeys="false" keyProperty="id">
+    	insert into users(name,gender,phone,password,regip,joindate,usernum) values (#{name},#{gender},#{phone},#{password},#{regip},#{joindate},#{usernum})
+    </insert>
+    <update id="updateUsers" parameterType="com.shop.entity.Users">
+        update users set name=#{users.name},gender=#{users.gender},phone=#{users.phone},password=#{users.password},regip=#{users.regip},joindate=#{users.joindate},usernum=#{users.usernum} where id=#{id}
+    </update>
+    <delete id="deleteUsers" parameterType="int">
+    	delete from users where id=#{id}
+    </delete>
+    <select id="selectNamePwdUsers" parameterType="string" resultType="com.shop.entity.Users">
+    	select * from users where name=#{name} and password=#{password}
+    </select>
+</mapper>

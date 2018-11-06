@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.InforMapper">
+    <select id="selectInforById" parameterType="int" resultType="com.shop.vo.InforMessage">
+        select * from infor where id=#{id}
+    </select>
+    <select id="selectAllInfor" resultType="com.shop.entity.Infor">
+    	select * from infor
+    </select>
+    <insert id="insertInfor" useGeneratedKeys="false" keyProperty="inforid">
+    	insert into infor(content,sender,receiver,isdelete) values (#{content},#{sender},#{receiver},1)
+    </insert>
+    <update id="updateInfor" parameterType="com.shop.entity.Infor">
+        update infor set content=#{infor.content},sender=#{infor.sender},receiver=#{infor.receiver} where id=#{id}
+    </update>
+    <update id="delInfor" parameterType="int">
+        update infor set isdelete=0 where id=#{id}
+    </update>
+    <delete id="deleteInfor" parameterType="int">
+    	delete from infor where id=#{id}
+    </delete>
+    <select id="selectSenderInfor" parameterType="int" resultType="com.shop.vo.InforMessage">
+    	select i.id,i.content,i.isdelete,u.name from infor i,users u where i.receiver=u.id and i.sender=#{sender}
+    </select>
+    <select id="selectReceiverInfor" parameterType="int" resultType="com.shop.vo.InforMessage">
+    	select i.id,i.content,i.isdelete,u.name from infor i,users u where i.sender=u.id and i.receiver=#{receiver}
+    </select>
+    <select id="selectIsdeleteInfor" resultType="com.shop.vo.InforMessage">
+    	select i.id,i.content,i.isdelete,u.name from infor i,users u where i.sender=u.id or i.receiver=u.id and i.isdelete=1
+    </select>
+</mapper>

@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+    background: #fff;
+}
+body {
+    font: 12px Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+body , div , dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+li{
+	list-style:none;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+/*头部框架*/
+#head{
+	width:100%;
+	background: #FFF;
+	z-index:10;
+}
+#h_headbox{
+	height:203px;
+	width:100%;
+	/*min-width: 1000px;*/
+    margin:0px auto;
+    background: #FFF;
+	/*background-image: url("../images/4910bd8dcf2a4243a52157cff1bdf549.jpg");*/
+    z-index:20;
+}
+/*头部链接*/
+.h_url{
+	height: 40px;
+	background: #F0F0F0;
+}
+.u_ubox{
+	min-width: 1000px;
+	margin:0px auto;
+	height: 40px;
+	width: 90%;
+}
+.h_lurl{
+	float:left;
+	padding-top: 12px;
+}
+.h_rurl{
+	float: right;
+	padding-top: 12px;
+}
+.h_lurl a,.h_rurl a{
+	margin: 5px;
+}
+/* 头部搜索框 搜索按钮样式 */
+.h_select{
+	min-width: 1000px;
+	margin:0px auto;
+	background: #FFF;
+	height: 161px;
+	width: 90%;
+}
+.h_selbox{
+	height: 163px;
+	width:100%;
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    float: left;
+	background: #FFF;
+}
+.s_inpbox{
+	height:125px;
+	width:450px;
+    margin:0 auto;
+}
+#head_input{
+	color:#9F9F9F;
+	border:2px solid #FFFF6F;
+	width: 296px;
+	height: 40px;
+	margin-top: 32px;
+	padding-left: 10px;
+}
+.b_selbut {
+	background-color:#FFFF6F;
+	width: 100px;
+	height: 40px;
+	border:1px solid #FFFF6F;
+    position: relative;
+    overflow: hidden;
+}
+.b_selbut:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+}
+.b_selbut:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+
+.s_urlpro li{
+	float:left;
+	margin-left: 12px;
+	margin-top:8px;
+	display: block;
+}
+
+/*分类 主页类型*/
+.h_class{
+	background-color:#FFFF6F;
+	width:100%;
+	margin-top:0px;
+	height: 38px;
+}
+.h_class li{
+	float: left;
+	display:block;
+	background: #FFFF6F;
+	text-align: center;
+	border-left: 2px dashed #F0F0F0;
+}
+.h_class .c_aurl{
+	border-left:none;
+	margin-left: 0px;
+}
+.h_class a{
+	font-size:16px;
+	display: block;
+	width: 108px;
+	line-height: 38px;
+}
+.h_class a:hover{
+	background-color: blue;
+}

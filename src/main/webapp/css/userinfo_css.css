@@ -1,0 +1,96 @@
+html, body {
+	background: #fff;
+}
+body {
+	font: 12px Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+body , div , dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style:none;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+/*背景*/
+#userinfo_background{
+	background-image:url("../images/4910bd8dcf2a4243a52157cff1bdf549.jpg");
+	background-size:100% 100%;
+	width:100%;
+	height:960px;
+}
+
+/*头部框架*/
+#head{
+	width:100%;
+	background: #FFF;
+	z-index:10;
+}
+#h_headbox{
+	height:203px;
+	width:100%;
+	/*min-width: 1000px;*/
+	margin:0px auto;
+	background: #FFF;
+	/*background-image: url("../images/4910bd8dcf2a4243a52157cff1bdf549.jpg");*/
+	z-index:20;
+}
+/*头部链接*/
+.h_url{
+	height: 40px;
+	background: #F0F0F0;
+}
+.u_ubox{
+	min-width: 1000px;
+	margin:0px auto;
+	height: 40px;
+	width: 90%;
+}
+.h_lurl{
+	float:left;
+	padding-top: 12px;
+}
+.h_rurl{
+	float: right;
+	padding-top: 12px;
+}
+.h_lurl a,.h_rurl a{
+	margin: 5px;
+}
+/*网站图标*/
+#icon_img{
+	width: 100%;
+	height: 96px;
+}
+/*用户信息*/
+#userinfo{
+	margin: auto;
+	width: 560px;
+	height: 369px;
+}
+#userinfo_tb{
+	height:100%;
+	width:100%;
+	background-color:yellow;
+	border-collapse: collapse;
+}
+#userinfo_tb .right_td{
+	text-align: right;
+	padding-right: 19px;
+}
+#userinfo_tb .left_td{
+	padding-left: 19px;
+}
+#userinfo_tb .tb_input{
+	width: 200px;
+	height: 27px;
+}
+#update_tb{
+	width: 80px;
+	height: 30px;
+	background: #3BF6F9;
+	border: 1.5px;
+}
